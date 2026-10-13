@@ -3,22 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inkscratch Digital (Pty) Ltd</title>
+    <title>Inkscratch Digital (Pty) Ltd | Professional IT & App Development</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; }
-        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 500px; width: 90%; }
-        h1 { color: #0056b3; margin-bottom: 10px; font-size: 2rem; }
-        p { font-size: 1.1rem; line-height: 1.6; color: #666; }
-        .footer { margin-top: 30px; font-size: 0.85rem; color: #999; border-top: 1px solid #eee; padding-top: 15px; }
+        /* Global & Reset Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
+        
+        /* Navigation Header Bar */
+        header { background-color: #ffffff; padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; }
+        .logo span { color: #2563eb; }
+        nav a { margin-left: 25px; text-decoration: none; color: #475569; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+        nav a:hover { color: #2563eb; }
+
+        /* Hero / Welcome Banner */
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #ffffff; padding: 100px 10% 120px 10%; text-align: center; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -0.5px; }
+        .hero p { font-size: 1.25rem; color: #94a3b8; max-width: 700px; margin: 0 auto 35px auto; }
+        .cta-btn { background-color: #2563eb; color: #ffffff; padding: 14px 30px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; transition: background-color 0.2s; }
+        .cta-btn:hover { background-color: #1d4ed8; }
+
+        /* Services Grid Layout (Pink Elephant Style Columns) */
+        .services-section { padding: 80px 10%; text-align: center; }
+        .section-title { font-size: 2rem; font-weight: 700; color: #0f172a; margin-bottom: 50px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 4px; background-color: #2563eb; margin: 15px auto 0 auto; border-radius: 2px; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
+        .service-card { background-color: #ffffff; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.01); border: 1px solid #e2e8f0; text-align: left; transition: transform 0.3s, box-shadow 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px -5px rgba(0,0,0,0.05); }
+        .service-icon { font-size: 2rem; margin-bottom: 20px; display: inline-block; }
+        .service-card h3 { font-size: 1.3rem; font-weight: 600; color: #0f172a; margin-bottom: 12px; }
+        .service-card p { color: #64748b; font-size: 0.95rem; }
+
+        /* Footer Section */
+        footer { background-color: #0f172a; color: #64748b; padding: 40px 10%; text-align: center; font-size: 0.9rem; border-top: 1px solid #1e293b; }
+        footer p { margin-bottom: 10px; color: #94a3b8; }
+        footer .legal { font-size: 0.8rem; color: #475569; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Inkscratch Digital (Pty) Ltd</h1>
-        <p>Professional mobile application development and custom information technology services based out of South Africa.</p>
-        <div class="footer">
-            Reg No: 2026 / 812349 / 07 | Germiston, Gauteng
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">Inkscratch<span>Digital</span></div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="mailto:Inkscratch.smartsolutions@gmail.com">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Hero Banner Section -->
+    <section class="hero">
+        <h1>Transforming Concepts Into Digital Reality</h1>
+        <p>We engineer enterprise-grade mobile software environments and custom information technology assets designed to grow your business infrastructure.</p>
+        <a href="mailto:Inkscratch.smartsolutions@gmail.com" class="cta-btn">Connect With Us</a>
+    </section>
+
+    <!-- Services Section with Pink Elephant Pillars -->
+    <section class="services-section" id="services">
+        <h2 class="section-title">Our Solutions Portfolio</h2>
+        <div class="services-grid">
+            
+            <!-- Pillar 1 -->
+            <div class="service-card">
+                <span class="service-icon">📱</span>
+                <h3>Mobile Application Engineering</h3>
+                <p>End-to-end native and cross-platform architecture deployed using cutting edge compilation engines to bring seamless user experiences to mobile frameworks.</p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="service-card">
+                <span class="service-icon">⚙️</span>
+                <h3>Managed IT Infrastructure</h3>
+                <p>Aligning strategic technology capabilities, infrastructure diagnostics, automation systems, and operations resilience metrics to safeguard service continuity.</p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="service-card">
+                <span class="service-icon">📊</span>
+                <h3>Digital Solution Advisory</h3>
+                <p>Architectural consulting to close execution gaps and map continuous operational improvements to optimize systemic performance footprints.</p>
+            </div>
+
         </div>
-    </div>
+    </section>
+
+    <!-- Corporate Footer -->
+    <footer>
+        <p>&copy; 2026 Inkscratch Digital. All rights reserved.</p>
+        <div class="legal">
+            Inkscratch Digital (Pty) Ltd | CIPC Registration Number: 2026 / 812349 / 07 | Germiston, Gauteng, South Africa
+        </div>
+    </footer>
+
 </body>
 </html>
